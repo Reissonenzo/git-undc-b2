@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ferretería Anchante</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav-container">
+        <!-- Logo -->
+        <div class="nav__logo">
+          <a href="index.html">
+            <img src="images/Logo Ferretería Moderno Naranja y Negro (1).png" alt="Ir a la página principal" />
+          </a>
+        </div>
+
+        <!-- Barra de búsqueda más extensa -->
+        <div class="search-container">
+          <input type="text" placeholder="Buscar..." />
+          <button class="search-btn"><i class="ri-search-line"></i></button>
+        </div>
+
+        <!-- Contenedor de sesión y carrito con separador -->
+        <div class="user-cart-container">
+          <!-- Botón de sesión y cuenta -->
+          <div class="account-container">
+            <button class="btn-account">
+              <span class="login-text">Iniciar sesión / Registrar</span>
+              <span class="account-text"
+                >Mi cuenta <i class="ri-arrow-down-s-fill"></i
+              ></span>
+            </button>
+          </div>
+
+          <!-- Separador -->
+          <div class="divider"></div>
+
+          <!-- Botón del carrito -->
+          <div class="cart-container">
+            <button class="cart-button">
+              <i class="ri-shopping-cart-line"></i>
+              <span>Carrito</span>
+              <span class="cart-notification">0</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <!-- Marcas con scroll -->
+        <div class="dropdown nav-item">
+          <button class="dropdown-toggle">
+            MARCAS
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m19.5 8.25-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+          </button>
+          <div class="dropdown-menu scrollable">
+            <a href="#">Crown</a>
+            <a href="#">Miller</a>
+            <a href="#">ESAB</a>
+            <a href="#">Bull Welder</a>
+            <a href="#">Bosch</a>
+            <a href="#">DeWalt</a>
+            <a href="#">Mitoshi</a>
+            <a href="#">DAF</a>
+            <a href="#">Alien Weld</a>
+            <a href="#">WARC</a>
+            <a href="#">NEO</a>
+            <a href="#">PTK</a>
+            <a href="#">Weld Boy</a>
+            <a href="#">Norstar</a>
+            <a href="#">DWT</a>
+          </div>
+        </div>
+
+        <a href="#" class="nav-item">MÁQUINAS DE SOLDAR</a>
+        <a href="#" class="nav-item">AMOLADORAS</a>
+        <a href="#" class="nav-item">TALADROS</a>
+        <a href="#" class="nav-item">ROTOMARTILLOS</a>
+        <a href="#" class="nav-item">DEMOLEDORES</a>
+
+        <!-- Otros con scroll -->
+        <div class="dropdown nav-item">
+          <button class="dropdown-toggle">
+            OTROS
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m19.5 8.25-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+          </button>
+          <div class="dropdown-menu scrollable">
+            <a href="#">Tronzadoras</a>
+            <a href="#">Sierras Circulares</a>
+            <a href="#">Atornilladores</a>
+            <a href="#">Pistolas de Calor</a>
+            <a href="#">Sopladoras</a>
+            <a href="#">Compresoras</a>
+            <a href="#">Aspiradoras</a>
+            <a href="#">Lijadoras</a>
+            <a href="#">Generadores</a>
+            <a href="#">Hidrolavadoras</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Contenedor del Banner -->
+    <div class="banner">
+      <div class="slides">
+        <div class="slide"><img src="images/imagen1.png" alt="Imagen 1" /></div>
+        <div class="slide"><img src="images/imagen2.png" alt="Imagen 2" /></div>
+      </div>
+
+      <!-- Botones de navegación -->
+      <div class="dots">
+        <span class="dot active" onclick="showSlide(0)"></span>
+        <span class="dot" onclick="showSlide(1)"></span>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+
+    <!-- Contenedor de categorias -->
+
+    <section class="categorias">
+      <div class="categorias-header">
+        <h2 id="categorias-title">CATEGORÍAS</h2>
+        <a href="#" class="ver-todo">Ver todo</a>
+      </div>
+    
+      <div class="categorias-container">
+        <div class="categoria">
+          <div class="img-container">
+            <img src="images/SOLIN-0004.png" alt="Máquinas de soldar" />
+          </div>
+          <p>
+            <strong>Máquinas de soldar</strong>
+            <span class="flecha-texto"></span>
+          </p>
+        </div>
+    
+        <div class="categoria">
+          <div class="img-container">
+            <img src="images/amoladora.png" alt="Amoladoras" />
+          </div>
+          <p>
+            <strong>Amoladoras</strong>
+            <span class="flecha-texto"></span>
+          </p>
+        </div>
+    
+        <div class="categoria">
+          <div class="img-container">
+            <img src="images/119.png" alt="Atornilladores" />
+          </div>
+          <p>
+            <strong>Atornilladores</strong>
+            <span class="flecha-texto"></span>
+          </p>
+        </div>
+    
+        <div class="categoria">
+          <div class="img-container">
+            <img src="images/MARTILLO-DEMOLEDOR.jpg" alt="Demoledores" />
+          </div>
+          <p>
+            <strong>Demoledores</strong>
+            <span class="flecha-texto"></span>
+          </p>
+        </div>
+    
+        <div class="categoria">
+          <div class="img-container">
+            <img src="images/0003299_1.jpg" alt="Rotomartillos" />
+          </div>
+          <p>
+            <strong>Rotomartillos</strong>
+            <span class="flecha-texto"></span>
+          </p>
+        </div>
+    
+        <div class="categoria">
+          <div class="img-container">
+            <img src="images/taladro-percutor-inalambrico-20v4ah-dongcheng.jpg" alt="Taladros" />
+          </div>
+          <p>
+            <strong>Taladros</strong>
+            <span class="flecha-texto"></span>
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="marcas">
+      <div class="marcas-header">
+        <h2>MARCAS</h2>
+        <a href="#" class="ver-todo">Ver todo</a>
+      </div>
+    
+      <div class="marcas-grid">
+        <div class="marca-item"><img src="images/DeWalt_Logo.png" alt="Dewalt" /></div>
+        <div class="marca-item"><img src="images/crown.png" alt="Crown" /></div>
+        <div class="marca-item"><img src="images/mitoshi.png" alt="Mitoshi" /></div>
+        <div class="marca-item"><img src="images/Bosch-Logo.png" alt="Bosch" /></div>
+        <div class="marca-item"><img src="images/warc.png" alt="Warc" /></div>
+    
+        <div class="marca-item"><img src="images/daf.png" alt="DAF" /></div>
+        <div class="marca-item"><img src="images/esab.png" alt="ESAB" /></div>
+        <div class="marca-item"><img src="images/miller.png" alt="Miller" /></div>
+        <div class="marca-item"><img src="images/neo.png" alt="NEO" /></div>
+        <div class="marca-item"><img src="images/alienweld.png" alt="Alien Weld" /></div>
+    
+        <!-- Última fila centrada con solo 4 elementos -->
+        <div class="marca-item ultima-fila"><img src="images/bullwelder.png" alt="Bull Welder" /></div>
+        <div class="marca-item ultima-fila"><img src="images/ptk.png" alt="PTK" /></div>
+        <div class="marca-item ultima-fila"><img src="images/weldboy.png" alt="Weld Boy" /></div>
+        <div class="marca-item ultima-fila"><img src="images/norstar.png" alt="Norstar" /></div>
+      </div>
+    </section>
+    
+    <footer class="footer">
+      <div class="footer-top">
+          <div class="feature">
+              <i class="fas fa-truck"></i>
+              <div>
+                  <strong>Envíos a todo el Perú</strong>
+                  <p>Rápido y seguro</p>
+              </div>
+          </div>
+          <div class="feature">
+              <i class="fas fa-shield-alt"></i>
+              <div>
+                  <strong>Garantía en todos nuestros productos</strong>
+                  <p>Hasta 3 años de garantía</p>
+              </div>
+          </div>
+          <div class="feature">
+              <i class="fas fa-user-check"></i>
+              <div>
+                  <strong>Distribuidores autorizados</strong>
+                  <p>Somos distribuidores de más de 10 marcas</p>
+              </div>
+          </div>
+          <div class="feature">
+              <i class="fas fa-credit-card"></i>
+              <div>
+                  <strong>Compra fácil y seguro</strong>
+                  <p>Compras 100% seguras</p>
+              </div>
+          </div>
+      </div>
+
+      <hr>
+
+      <div class="footer-middle">
+          <div class="column">
+              <h3>Servicio al Cliente</h3>
+              <p>Preguntas Frecuentes</p>
+              <p>Proceso de compra</p>
+          </div>
+          <div class="column">
+              <h3>Ofertas y Promociones</h3>
+              <p>Todas nuestras ofertas y promociones del mes a tu correo electrónico.</p>
+              <input type="email" placeholder="Tu email">
+              <button>Suscribir</button>
+          </div>
+          <div class="column">
+              <h3>Nuestras Tiendas Autorizadas</h3>
+              <p>Av. Guillermo Dansey 701 - Int 34 - Cercado de Lima. (Tienda Principal)</p>
+          </div>
+          <div class="column">
+              <h3>Horario</h3>
+              <p>Atención de Lunes a Sábados de 10 AM - 6 PM.</p>
+          </div>
+      </div>
+
+      <div class="footer-bottom">
+          <p>© 2025 Anchante</p>
+          <div class="social-icons">
+              <i class="fab fa-facebook"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-youtube"></i>
+              <i class="fab fa-tiktok"></i>
+          </div>
+      </div>
+
+      <a href="https://wa.me/1234567890" class="whatsapp-chat">
+          <i class="fab fa-whatsapp"></i>
+      </a>
+  </footer>
+    
+    
+    
+    
+  </body>
+</html>

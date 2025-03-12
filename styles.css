@@ -1,0 +1,921 @@
+/* Reset general */
+* {
+  box-sizing: border-box; /* Asegura que el padding y el borde estén incluidos en el tamaño total del elemento */
+  padding: 0; /* Elimina el padding por defecto */
+  margin: 0; /* Elimina el margen por defecto */
+}
+
+body {
+  font-family: Arial, sans-serif; /* Establece la fuente predeterminada */
+  background-color: white; /* Fondo blanco */
+  color: black; /* Color de texto predeterminado */
+}
+
+/* Header */
+.header {
+  background-color: red; /* Fondo rojo para el header */
+  padding: 10px 20px; /* Espaciado interno */
+  position: sticky; /* Hace que el header sea fijo en la parte superior */
+  top: 0; /* Lo fija en la parte superior de la ventana */
+  width: 100%; /* Ocupa el 100% del ancho */
+  z-index: 1100; /* Asegura que esté por encima de otros elementos */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para separar visualmente */
+}
+
+/* Contenedor de navegación */
+.nav-container {
+  display: flex; /* Usa flexbox para alinear elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor en la página */
+}
+
+/* Logo */
+.nav__logo img {
+  width: 95px; /* Ancho del logo */
+  transition: transform 0.3s ease-in-out; /* Animación de escala al hacer hover */
+}
+
+.nav__logo img:hover {
+  transform: scale(1.1); /* Escala el logo al hacer hover */
+}
+
+/* Barra de búsqueda más extensa y alta */
+.search-container {
+  display: flex; /* Usa flexbox para alinear elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+  flex-grow: 1; /* Hace que el contenedor ocupe el espacio disponible */
+  margin: 0 20px; /* Margen a los lados */
+}
+
+.search-container input {
+  width: 100%; /* Ocupa el 100% del ancho disponible */
+  height: 45px; /* Altura del input */
+  padding: 12px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 5px 0 0 5px; /* Bordes redondeados solo en el lado izquierdo */
+  font-size: 16px; /* Tamaño de la fuente */
+  transition: box-shadow 0.3s ease-in-out; /* Animación de sombra al hacer focus */
+}
+
+.search-container input:focus {
+  outline: none; /* Elimina el contorno al hacer focus */
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* Sombra al hacer focus */
+}
+
+.search-btn {
+  background-color: #b30000; /* Color de fondo del botón */
+  border: none; /* Sin borde */
+  height: 45px; /* Altura del botón */
+  padding: 12px 15px; /* Espaciado interno */
+  border-radius: 0 5px 5px 0; /* Bordes redondeados solo en el lado derecho */
+  cursor: pointer; /* Cambia el cursor a pointer */
+  color: white; /* Color del texto */
+  font-size: 18px; /* Tamaño de la fuente */
+  transition: background-color 0.3s ease-in-out; /* Animación de cambio de color al hacer hover */
+}
+
+.search-btn i {
+  font-size: 20px; /* Tamaño del ícono */
+}
+
+.search-btn:hover {
+  background-color: #ff4d4d; /* Cambia el color de fondo al hacer hover */
+}
+
+/* Contenedor de sesión y carrito */
+.user-cart-container {
+  display: flex; /* Usa flexbox para alinear elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+}
+
+/* Botón de sesión y cuenta */
+.account-container {
+  display: flex; /* Usa flexbox para alinear elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+}
+
+.btn-account {
+  display: flex; /* Usa flexbox para alinear elementos */
+  flex-direction: column; /* Organiza los elementos en columna */
+  background-color: transparent; /* Fondo transparente */
+  border: none; /* Sin borde */
+  color: white; /* Color del texto */
+  font-size: 14px; /* Tamaño de la fuente */
+  cursor: pointer; /* Cambia el cursor a pointer */
+  font-weight: bold; /* Texto en negrita */
+  text-align: left; /* Alineación del texto a la izquierda */
+  padding: 10px; /* Espaciado interno */
+  transition: color 0.3s ease-in-out; /* Animación de cambio de color al hacer hover */
+}
+
+.btn-account:hover {
+  color: #ffcccb; /* Cambia el color del texto al hacer hover */
+}
+
+.login-text {
+  font-size: 12px; /* Tamaño de la fuente */
+  color: #ffffff; /* Color del texto */
+}
+
+.account-text {
+  font-size: 16px; /* Tamaño de la fuente */
+  font-weight: bold; /* Texto en negrita */
+}
+
+/* Separador entre sesión y carrito */
+.divider {
+  width: 1px; /* Ancho del separador */
+  height: 40px; /* Altura del separador */
+  background-color: white; /* Color del separador */
+  margin: 0 15px; /* Margen a los lados */
+}
+
+/* Botón del carrito */
+.cart-container {
+  position: relative; /* Posición relativa para el contenedor */
+}
+
+.cart-button {
+  display: flex; /* Usa flexbox para alinear elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+  background-color: transparent; /* Fondo transparente */
+  border: none; /* Sin borde */
+  color: white; /* Color del texto */
+  font-size: 16px; /* Tamaño de la fuente */
+  font-weight: bold; /* Texto en negrita */
+  cursor: pointer; /* Cambia el cursor a pointer */
+  padding: 10px; /* Espaciado interno */
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Animaciones de transformación y color */
+}
+
+.cart-button i {
+  font-size: 24px; /* Tamaño del ícono */
+  margin-right: 5px; /* Margen a la derecha */
+}
+
+.cart-button:hover {
+  color: #ffcccb; /* Cambia el color del texto al hacer hover */
+  transform: scale(1.1); /* Escala el botón al hacer hover */
+}
+
+.cart-notification {
+  background-color: white; /* Fondo blanco */
+  color: red; /* Color del texto */
+  font-size: 12px; /* Tamaño de la fuente */
+  font-weight: bold; /* Texto en negrita */
+  padding: 2px 6px; /* Espaciado interno */
+  border-radius: 50%; /* Bordes redondeados */
+  position: absolute; /* Posición absoluta */
+  top: -5px; /* Posición superior */
+  right: -5px; /* Posición derecha */
+}
+
+/* NAVBAR (Sticky) */
+.navbar {
+  position: sticky; /* Hace que el navbar sea fijo */
+  top: 60px; /* Lo fija debajo del header */
+  width: 100%; /* Ocupa el 100% del ancho */
+  background-color: white; /* Fondo blanco */
+  display: flex; /* Usa flexbox para alinear elementos */
+  justify-content: center; /* Centra horizontalmente los elementos */
+  padding: 15px 0; /* Espaciado interno */
+  border-bottom: 2px solid #d3d3d3; /* Borde inferior gris claro */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Contenedor del navbar */
+.navbar-container {
+  display: flex; /* Usa flexbox para alinear elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+  gap: 20px; /* Espacio entre elementos */
+  width: 100%; /* Ocupa el 100% del ancho */
+  max-width: 1200px; /* Ancho máximo del contenedor */
+}
+
+/* Estilos de los ítems de navegación (sin líneas divisorias) */
+.nav-item {
+  flex: 1; /* Ocupa el espacio disponible */
+  text-decoration: none; /* Sin subrayado */
+  color: black; /* Color del texto */
+  font-size: 16px; /* Tamaño de la fuente */
+  font-weight: bold; /* Texto en negrita */
+  padding: 10px 15px; /* Espaciado interno */
+  display: flex; /* Usa flexbox para alinear elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: center; /* Centra horizontalmente los elementos */
+  gap: 5px; /* Espacio entre elementos */
+  transition: color 0.3s ease-in-out 0.1s, transform 0.3s ease-in-out 0.1s; /* Animaciones de color y transformación */
+  text-align: center; /* Alineación del texto al centro */
+}
+
+.nav-item:hover {
+  color: red; /* Cambia el color del texto al hacer hover */
+  transform: scale(1.05); /* Escala el elemento al hacer hover */
+}
+
+.nav-item svg {
+  width: 16px; /* Ancho del ícono */
+  height: 16px; /* Altura del ícono */
+}
+
+/* ==================== MENÚ "MARCAS" ==================== */
+.dropdown {
+  position: relative; /* Posición relativa para el contenedor */
+  flex: 1; /* Ocupa el espacio disponible */
+  text-align: center; /* Alineación del texto al centro */
+}
+
+.dropdown-toggle {
+  background: none; /* Sin fondo */
+  border: none; /* Sin borde */
+  font-size: 16px; /* Tamaño de la fuente */
+  font-weight: bold; /* Texto en negrita */
+  color: black; /* Color del texto */
+  cursor: pointer; /* Cambia el cursor a pointer */
+  padding: 10px 15px; /* Espaciado interno */
+  display: flex; /* Usa flexbox para alinear elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: center; /* Centra horizontalmente los elementos */
+  gap: 5px; /* Espacio entre elementos */
+  transition: color 0.3s ease-in-out 0.1s, transform 0.3s ease-in-out 0.1s; /* Animaciones de color y transformación */
+}
+
+.dropdown-toggle:hover {
+  color: red; /* Cambia el color del texto al hacer hover */
+  transform: scale(1.05); /* Escala el elemento al hacer hover */
+}
+
+/* Contenedor de las marcas con scroll */
+.dropdown-menu {
+  position: absolute; /* Posición absoluta para el menú desplegable */
+  top: 100%; /* Lo coloca debajo del botón */
+  left: 50%; /* Centrado respecto al botón */
+  transform: translateX(-50%) translateY(-5px); /* Centra el menú */
+  background: white; /* Fondo blanco */
+  border: 1px solid #d3d3d3; /* Borde gris claro */
+  display: none; /* Oculta el menú por defecto */
+  flex-direction: column; /* Organiza los elementos en columna */
+  min-width: 200px; /* Ancho mínimo del menú */
+  max-height: 250px; /* Altura máxima del menú */
+  overflow-y: auto; /* Scroll vertical si es necesario */
+  scrollbar-gutter: stable both-edges; /* Espacio para el scrollbar */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  padding: 5px 0; /* Espaciado interno */
+  opacity: 0; /* Opacidad inicial */
+  transition: opacity 0.3s ease-in-out 0.2s, transform 0.3s ease-in-out 0.2s; /* Animaciones de opacidad y transformación */
+}
+
+/* Mostrar el menú al pasar el mouse */
+.dropdown:hover .dropdown-menu {
+  display: flex; /* Muestra el menú */
+  opacity: 1; /* Opacidad completa */
+  transform: translateX(-50%) translateY(0); /* Posición final */
+}
+
+/* Scroll discreto */
+.dropdown-menu::-webkit-scrollbar {
+  width: 6px; /* Ancho del scrollbar */
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+  background: red; /* Color del scrollbar */
+  border-radius: 3px; /* Bordes redondeados */
+}
+
+.dropdown-menu::-webkit-scrollbar-track {
+  background: transparent; /* Fondo transparente */
+}
+
+/* Enlaces dentro del menú */
+.dropdown-menu a {
+  color: black; /* Color del texto */
+  text-decoration: none; /* Sin subrayado */
+  display: block; /* Muestra como bloque */
+  padding: 8px 15px; /* Espaciado interno */
+  font-size: 14px; /* Tamaño de la fuente */
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out; /* Animaciones de fondo y color */
+}
+
+.dropdown-menu a:hover {
+  color: red; /* Cambia el color del texto al hacer hover */
+  background: #e0e0e0; /* Cambia el fondo al hacer hover */
+}
+
+/* ==================== MENÚ "OTROS" ==================== */
+.otros-dropdown {
+  position: relative; /* Posición relativa para el contenedor */
+  flex: 1; /* Ocupa el espacio disponible */
+  text-align: center; /* Alineación del texto al centro */
+}
+
+.otros-dropdown-toggle {
+  background: none; /* Sin fondo */
+  border: none; /* Sin borde */
+  font-size: 16px; /* Tamaño de la fuente */
+  font-weight: bold; /* Texto en negrita */
+  color: black; /* Color del texto */
+  cursor: pointer; /* Cambia el cursor a pointer */
+  padding: 10px 15px; /* Espaciado interno */
+  display: flex; /* Usa flexbox para alinear elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: center; /* Centra horizontalmente los elementos */
+  gap: 5px; /* Espacio entre elementos */
+  transition: color 0.3s ease-in-out 0.1s, transform 0.3s ease-in-out 0.1s; /* Animaciones de color y transformación */
+}
+
+.otros-dropdown-toggle:hover {
+  color: red; /* Cambia el color del texto al hacer hover */
+  transform: scale(1.05); /* Escala el elemento al hacer hover */
+}
+
+/* Menú desplegable de "Otros" con scroll */
+.otros-dropdown-menu {
+  position: absolute; /* Posición absoluta para el menú desplegable */
+  top: 100%; /* Lo coloca debajo del botón */
+  left: 50%; /* Centrado respecto al botón */
+  transform: translateX(-50%) translateY(-5px); /* Centra el menú */
+  background: white; /* Fondo blanco */
+  border: 1px solid #d3d3d3; /* Borde gris claro */
+  display: none; /* Oculta el menú por defecto */
+  flex-direction: column; /* Organiza los elementos en columna */
+  min-width: 200px; /* Ancho mínimo del menú */
+  max-height: 250px; /* Altura máxima del menú */
+  overflow-y: auto; /* Scroll vertical si es necesario */
+  scrollbar-gutter: stable both-edges; /* Espacio para el scrollbar */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  padding: 5px 0; /* Espaciado interno */
+  opacity: 0; /* Opacidad inicial */
+  transition: opacity 0.3s ease-in-out 0.2s, transform 0.3s ease-in-out 0.2s; /* Animaciones de opacidad y transformación */
+}
+
+/* Mostrar menú al pasar el mouse */
+.otros-dropdown:hover .otros-dropdown-menu {
+  display: flex; /* Muestra el menú */
+  opacity: 1; /* Opacidad completa */
+  transform: translateX(-50%) translateY(0); /* Posición final */
+}
+
+/* Scroll discreto */
+.otros-dropdown-menu::-webkit-scrollbar {
+  width: 6px; /* Ancho del scrollbar */
+}
+
+.otros-dropdown-menu::-webkit-scrollbar-thumb {
+  background: red; /* Color del scrollbar */
+  border-radius: 3px; /* Bordes redondeados */
+}
+
+.otros-dropdown-menu::-webkit-scrollbar-track {
+  background: transparent; /* Fondo transparente */
+}
+
+/* Enlaces dentro del menú "Otros" */
+.otros-dropdown-menu a {
+  padding: 10px 15px; /* Espaciado interno */
+  text-decoration: none; /* Sin subrayado */
+  color: black; /* Color del texto */
+  display: block; /* Muestra como bloque */
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out; /* Animaciones de fondo y color */
+}
+
+.otros-dropdown-menu a:hover {
+  background: red; /* Cambia el fondo al hacer hover */
+  color: white; /* Cambia el color del texto al hacer hover */
+}
+
+/* ======= AGREGAR PEQUEÑO DELAY AL APARECER EL SCROLL EN LOS MENÚS ======= */
+/* Se ha modificado el delay de la transición para los dropdowns de "Marcas" y "Otros" a 0.2s */
+
+/* Espaciado entre el navbar y el banner */
+.banner {
+  position: relative; /* Posición relativa para el contenedor */
+  width: 90%; /* Ancho del banner */
+  max-width: 1200px; /* Ancho máximo del banner */
+  height: 500px; /* Altura del banner */
+  margin: 30px auto; /* Margen superior e inferior y centrado horizontal */
+  overflow: hidden; /* Oculta el contenido que se desborda */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  cursor: grab; /* Cambia el cursor a grab */
+  display: flex; /* Usa flexbox para alinear elementos */
+  justify-content: center; /* Centra horizontalmente los elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+}
+
+/* Contenedor de imágenes */
+.slides {
+  display: flex; /* Usa flexbox para alinear elementos */
+  width: 300%; /* Ancho total del contenedor de slides */
+  height: 100%; /* Altura del contenedor de slides */
+  transition: transform 0.5s ease-in-out; /* Animación de transición */
+}
+
+/* Cada slide ocupa el 100% del banner */
+.slide {
+  width: 100%; /* Ancho del slide */
+  height: 100%; /* Altura del slide */
+  flex-shrink: 0; /* Evita que los slides se reduzcan */
+  display: flex; /* Usa flexbox para alinear elementos */
+  justify-content: center; /* Centra horizontalmente los elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+}
+
+/* Ajuste de imagen */
+.slide img {
+  width: 100%; /* Ancho de la imagen */
+  height: 100%; /* Altura de la imagen */
+  object-fit: cover; /* Ajusta la imagen al contenedor */
+  user-select: none; /* Evita que el usuario seleccione la imagen */
+  pointer-events: none; /* Evita que la imagen capture eventos del mouse */
+}
+
+/* Indicadores */
+.dots {
+  position: absolute; /* Posición absoluta para los indicadores */
+  bottom: 10px; /* Posición inferior */
+  left: 50%; /* Centrado horizontalmente */
+  transform: translateX(-50%); /* Centra los indicadores */
+  display: flex; /* Usa flexbox para alinear elementos */
+  gap: 8px; /* Espacio entre indicadores */
+}
+
+.dot {
+  width: 14px; /* Ancho del indicador */
+  height: 14px; /* Altura del indicador */
+  background-color: white; /* Color de fondo del indicador */
+  border-radius: 50%; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor a pointer */
+  transition: background 0.3s ease; /* Animación de cambio de color */
+}
+
+.dot.active {
+  background-color: red; /* Cambia el color del indicador activo */
+}
+
+
+
+/* Categorias container */
+
+/* Sección Categorías */
+.categorias {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+/* Encabezado */
+.categorias-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#categorias-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.ver-todo {
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.ver-todo::after {
+  content: " →";
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.ver-todo:hover {
+  color: red;
+  transform: translateX(-5px);
+}
+
+.ver-todo:hover::after {
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+/* Contenedor de tarjetas con separación uniforme */
+.categorias-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centra horizontalmente */
+  gap: 30px;  /* Espacio uniforme entre tarjetas */
+  padding: 0 15px; /* Espacio lateral para que no se toquen los bordes */
+}
+
+/* Tarjeta de categoría */
+/* Sección Categorías */
+.categorias {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+/* Encabezado */
+.categorias-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#categorias-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.ver-todo {
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.ver-todo::after {
+  content: " →";
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.ver-todo:hover {
+  color: red;
+  transform: translateX(-5px);
+}
+
+.ver-todo:hover::after {
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+/* Contenedor de las tarjetas */
+/* Si deseas usar margin en cada tarjeta, puedes quitar el gap y aplicar margen a .categoria */
+.categorias-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* Esto da un espacio uniforme entre tarjetas */
+  /* Alternativamente, puedes quitar gap y usar: */
+  /* padding: 15px; */
+}
+
+/* Tarjeta de categoría con margen individual (opcional si no usas gap) */
+.categoria {
+  text-align: center;
+  width: 130px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  /* Si prefieres margen individual, descomenta: */
+  /* margin: 15px; */
+}
+
+/* Contenedor de imagen con fondo circular gris */
+.img-container {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.img-container img {
+  max-width: 100%;
+  max-height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.categoria:hover .img-container img {
+  transform: scale(1.1);
+}
+
+/* Texto de la categoría */
+.categoria p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.flecha-texto {
+  opacity: 0;
+  margin-left: 5px;
+  transition: opacity 0.3s ease;
+}
+
+.categoria:hover p {
+  transform: translateX(-5px);
+}
+
+.categoria:hover .flecha-texto {
+  opacity: 1;
+  color: red;
+}
+
+.flecha-texto::before {
+  content: "→";
+}
+
+/* Sección Marcas */
+/* Sección Marcas */
+.marcas {
+  width: 90%;
+  max-width: 1200px;
+  margin: 60px auto 0;  /* Separa la sección de Categorías (arriba) con 60px de margen superior */
+  padding: 30px 0;
+  background-color: #f9f9f9; /* Fondo suave para diferenciar la sección (opcional) */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Encabezado de la sección */
+.marcas-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.marcas-header h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.ver-todo {
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.ver-todo::after {
+  content: " →";
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.ver-todo:hover {
+  color: red;
+  transform: translateX(-5px);
+}
+
+.ver-todo:hover::after {
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+/* Contenedor principal de marcas */
+.marcas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Encabezado de Marcas con título y "Ver todo" */
+.marcas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+}
+
+/* Título de la sección */
+.marcas-header h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Enlace "Ver todo" */
+.ver-todo {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.ver-todo:hover {
+  text-decoration: underline;
+}
+
+/* Grid de Marcas */
+.marcas-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columnas por fila */
+  gap: 40px;
+  padding: 0 20px;
+  justify-content: center;
+}
+
+/* Asegura que la última fila quede centrada */
+.marcas-grid::after {
+  content: "";
+  display: block;
+  width: 100%;
+  grid-column: span 5;
+}
+
+/* Estilo de cada marca */
+.marca-item {
+  background-color: #fff;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  width: 150px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.marca-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Ajuste de la imagen */
+.marca-item img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Ajuste especial para los últimos dos elementos debajo del segundo y tercer elemento de la segunda fila */
+.marca-item:nth-child(11) {
+  grid-column: 2; /* Se coloca debajo del segundo */
+  grid-row: 3;
+}
+
+.marca-item:nth-child(12) {
+  grid-column: 3; /* Se coloca debajo del tercero */
+  grid-row: 3;
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+  .marcas-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .marcas-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .marcas-grid {
+    grid-template-columns: repeat(1, 1fr); /* 1 columna en móviles */
+  }
+}
+/* Footer principal */
+.footer {
+  background: #fff;
+  color: #000;
+  padding: 20px 40px;
+  font-family: Arial, sans-serif;
+}
+
+/* Sección superior con íconos */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 23%;
+}
+
+.feature i {
+  font-size: 24px;
+  color: #000;
+}
+
+/* Línea separadora */
+hr {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+  margin: 20px 0;
+}
+
+/* Sección del medio con 4 columnas */
+.footer-middle {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.column {
+  width: 23%;
+}
+
+.column h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.column input {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.column button {
+  background: #000;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.column button:hover {
+  background: #333;
+}
+
+/* Sección inferior */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+/* Íconos de redes sociales */
+.social-icons i {
+  font-size: 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+/* Chat flotante de WhatsApp */
+.whatsapp-chat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: #fff;
+  font-size: 28px;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-chat:hover {
+  background: #1ebe5d;
+}
+
+/* Diseño responsivo */
+@media (max-width: 1024px) {
+  .feature, .column {
+      width: 48%;
+      margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-top, .footer-middle {
+      flex-direction: column;
+  }
+  
+  .feature, .column {
+      width: 100%;
+  }
+}
+
+
+
