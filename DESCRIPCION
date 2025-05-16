@@ -1,0 +1,8 @@
+echo "# PROYECTO-WEB" >> README.md
+echo "Este es un proyecto web de una pastelería que muestra información y productos." >> README.md
+echo "Tecnologías usadas: HTML, CSS, JavaScript." >> README.md
+echo "Repositorio creado para mostrar el avance del desarrollo." >> README.md
+
+git add README.md
+git commit -m "Agregar archivo README"
+git push
